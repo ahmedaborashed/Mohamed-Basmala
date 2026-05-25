@@ -253,38 +253,7 @@ html[lang="ar"] .door-names-hero:not(.ar-text) {
   margin-bottom: 25px;
 }
 
-.hero-img{
-  position: absolute;
-  width: 170px;
-  height: 240px;
-  overflow: hidden;
-  border-radius: 28px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.18);
-  opacity: 0;
-}
 
-.hero-img img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* الشمال */
-.hero-img-left{
-  left: 50%;
-  top: 20px;
-  transform: translateX(-120%) rotate(-7deg);
-  animation: leftPhoto 1.4s ease forwards;
-}
-
-/* اليمين */
-.hero-img-right{
-  left: 50%;
-  top: 0;
-  transform: translateX(20%) rotate(7deg);
-  animation: rightPhoto 1.4s ease forwards;
-  animation-delay: .2s;
-}
 
 @keyframes leftPhoto{
   to{
@@ -315,6 +284,35 @@ html[lang="ar"] .door-names-hero:not(.ar-text) {
   object-fit: cover;
   object-position: center;
   display: block;
+}
+.blessing-message{
+  position: relative;
+  z-index: 2;
+  margin: 12px auto 25px;
+  padding: 0 25px;
+  text-align: center;
+  max-width: 700px;
+}
+
+.blessing-message p{
+  font-family: "Amiri", serif;
+  font-size: clamp(18px, 2.2vw, 26px);
+  line-height: 2;
+  color: #6f5310;
+
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+
+  position: relative;
+  display: inline-block;
+}
+
+.blessing-message p::before,
+.blessing-message p::after{
+  content: "✦";
+  color: #c9a84c;
+  font-size: 14px;
+  margin: 0 12px;
+  opacity: 0.8;
 }
 .door-overlay {
   position: absolute;
